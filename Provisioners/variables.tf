@@ -13,5 +13,5 @@ variable "ssh_private_key_path" {
 
 variable "vm_public_ip" {
   type        = string
-  description = "4.206.28.154"
+  default = "4.206.28.154"
 }

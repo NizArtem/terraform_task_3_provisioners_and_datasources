@@ -1,4 +1,7 @@
 resource "null_resource" "nginx" {
+  triggers = {
+    vm_id = data.azurerm_virtual_machine.vm.id
+  }
   connection {
     type        = "ssh"
     host        = var.vm_public_ip

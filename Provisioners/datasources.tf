@@ -22,3 +22,8 @@ data "azurerm_virtual_machine" "vm" {
   name                = "matebox"
   resource_group_name = data.azurerm_resource_group.rg.name
 }
+
+data "azurerm_public_ip" "vm_pip" {
+  name                = "linuxboxpip"
+  resource_group_name = data.azurerm_resource_group.rg.name
+}
