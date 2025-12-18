@@ -10,8 +10,3 @@ variable "ssh_user" {
 variable "ssh_private_key_path" {
   type = string
 }
-
-variable "vm_public_ip" {
-  type        = string
-  default = "4.206.28.154"
-}

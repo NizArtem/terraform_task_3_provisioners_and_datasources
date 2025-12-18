@@ -4,7 +4,7 @@ resource "null_resource" "nginx" {
   }
   connection {
     type        = "ssh"
-    host        = var.vm_public_ip
+    host = data.azurerm_public_ip.vm_pip.ip_address
     user        = var.ssh_user
     private_key = file(var.ssh_private_key_path)
     timeout     = "2m"
